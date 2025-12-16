@@ -1,6 +1,14 @@
 # E-Commerce Web App
-
-A simple e-commerce platform built with Rails 8.1 and MySQL.
+How to use?
+1. Access "Sign Up", enter your email address and passwords.
+2. You can enter the inside of e-commerce page, it shows 5 categories of products.
+3. You can select and search each category you like.
+4. This is sample website, no warry to pay $100 items.
+5. You can see order history, carts inside.
+6. Once logged out, enter signed up information to enter it.
+   
+This is simple e-commerce platform built with Rails 8.1 and MySQL.
+Below information shows system design, and database structures.
 
 ## System Design
 
