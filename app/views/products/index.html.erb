@@ -1,0 +1,38 @@
+<h1>Products</h1>
+
+<div style="margin-bottom: 2rem;">
+  <%= form_with url: products_path, method: :get, local: true, style: "display: flex; gap: 1rem;" do |f| %>
+    <%= f.text_field :search, placeholder: "Search products...", value: params[:search], style: "padding: 0.5rem; flex: 1; border: 1px solid #ddd; border-radius: 4px;" %>
+    <%= f.select :category_id, options_from_collection_for_select(@categories, :id, :name, params[:category_id]), { include_blank: "All Categories" }, style: "padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;" %>
+    <%= f.submit "Search", style: "padding: 0.5rem 2rem; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;" %>
+  <% end %>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 2rem;">
+  <% @products.each do |product| %>
+    <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background: white;">
+      <% if product.image_url.present? %>
+        <%= image_tag product.image_url, alt: product.name, style: "width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 1rem;" %>
+      <% else %>
+        <div style="width: 100%; height: 200px; background: #f0f0f0; border-radius: 4px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center;">
+          No Image
+        </div>
+      <% end %>
+      
+      <h3 style="margin: 0 0 0.5rem 0;"><%= link_to product.name, product_path(product), style: "color: #333; text-decoration: none;" %></h3>
+      <p style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;"><%= product.category.name %></p>
+      <p style="color: #28a745; font-size: 1.2rem; font-weight: bold; margin: 0.5rem 0;">$<%= number_with_precision(product.price, precision: 2) %></p>
+      
+      <% if product.in_stock? %>
+        <p style="color: #666; font-size: 0.9rem;">In stock: <%= product.stock_quantity %></p>
+        <%= button_to "Add to Cart", add_to_cart_path(product), style: "width: 100%; padding: 0.75rem; background: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 1rem;" %>
+      <% else %>
+        <p style="color: #dc3545; font-weight: bold;">Out of Stock</p>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+<% if @products.empty? %>
+  <p style="text-align: center; color: #666; margin-top: 2rem;">No products found.</p>
+<% end %>

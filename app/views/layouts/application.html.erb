@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for(:title) || "Noticeboard" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Noticeboard">
+    <meta name="mobile-web-app-capable" content="yes">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= yield :head %>
+
+    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
+    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
+
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+
+    <%# Includes all stylesheet files in app/assets/stylesheets %>
+    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <nav style="background: #333; color: white; padding: 1rem; margin-bottom: 2rem;">
+      <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <%= link_to "E-Commerce Store", root_path, style: "color: white; text-decoration: none; font-size: 1.5rem; font-weight: bold;" %>
+          <%= link_to "Products", products_path, style: "color: white; text-decoration: none; margin-left: 2rem;" %>
+        </div>
+        <div>
+          <%= link_to "Cart (#{cart_items_count})", cart_index_path, style: "color: white; text-decoration: none; margin-right: 1rem;" %>
+          <% if logged_in? %>
+            <%= link_to "Orders", orders_path, style: "color: white; text-decoration: none; margin-right: 1rem;" %>
+            <span style="margin-right: 1rem;">Welcome, <%= current_user.name %>!</span>
+            <%= link_to "Logout", logout_path, method: :delete, style: "color: white; text-decoration: none;" %>
+          <% else %>
+            <%= link_to "Login", login_path, style: "color: white; text-decoration: none; margin-right: 1rem;" %>
+            <%= link_to "Sign Up", signup_path, style: "color: white; text-decoration: none;" %>
+          <% end %>
+        </div>
+      </div>
+    </nav>
+    
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 1rem;">
+      <% if notice %>
+        <div style="background: #d4edda; color: #155724; padding: 1rem; margin-bottom: 1rem; border-radius: 4px;">
+          <%= notice %>
+        </div>
+      <% end %>
+      
+      <% if alert %>
+        <div style="background: #f8d7da; color: #721c24; padding: 1rem; margin-bottom: 1rem; border-radius: 4px;">
+          <%= alert %>
+        </div>
+      <% end %>
+      
+      <%= yield %>
+    </div>
+  </body>
+</html>
