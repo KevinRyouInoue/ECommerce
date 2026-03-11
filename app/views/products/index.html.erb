@@ -1,4 +1,31 @@
-<h1>Products</h1>
+<section class="dating-hero">
+  <div class="dating-hero__content">
+    <span class="dating-hero__eyebrow">Swipe-style spotlight</span>
+    <h1>Dinner date energy, but make it candid.</h1>
+    <p>
+      A softer profile-card treatment gives the photo a more dating-app feel, while the crop and framing
+      shift the extended arm out of focus so the moment reads more like someone across the table took it.
+    </p>
+
+    <div class="dating-hero__chips" aria-label="Photo style highlights">
+      <span>Cozy lighting</span>
+      <span>Third-person vibe</span>
+      <span>Warm & approachable</span>
+    </div>
+  </div>
+
+  <div class="dating-hero__card">
+    <div class="dating-hero__image-frame">
+      <%= image_tag "https://github.com/user-attachments/assets/5dcbf0b4-a30f-4f19-a62d-52d4d06543ab", alt: "Dating profile style dinner portrait", class: "dating-hero__image" %>
+      <div class="dating-hero__image-overlay">
+        <strong>Dinner date look</strong>
+        <span>Styled to feel candid instead of selfie-first.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<h2 class="products-page-title">Products</h2>
 
 <div style="margin-bottom: 2rem;">
   <%= form_with url: products_path, method: :get, local: true, style: "display: flex; gap: 1rem;" do |f| %>

@@ -5,7 +5,7 @@ one:
   description: MyText
   price: 9.99
   stock_quantity: 1
-  image_url: MyString
+  image_url: https://example.com/product-one.jpg
   category: one
 
 two:
@@ -13,5 +13,5 @@ two:
   description: MyText
   price: 9.99
   stock_quantity: 1
-  image_url: MyString
+  image_url: https://example.com/product-two.jpg
   category: two
