@@ -1,0 +1,65 @@
+<svg width="720" height="900" viewBox="0 0 720 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="900" rx="48" fill="url(#background)"/>
+  <rect x="48" y="58" width="624" height="784" rx="38" fill="url(#photoFrame)"/>
+  <rect x="82" y="92" width="556" height="716" rx="30" fill="url(#photoGlow)"/>
+
+  <g opacity="0.85">
+    <circle cx="136" cy="150" r="16" fill="#FFF3EA"/>
+    <circle cx="570" cy="142" r="14" fill="#FFE6D7"/>
+    <circle cx="520" cy="224" r="9" fill="#FFD3BF"/>
+    <circle cx="170" cy="252" r="10" fill="#FFE0D1"/>
+    <path d="M116 218C182 114 284 82 400 82C517 82 601 134 638 226V382H82V258C91 242 102 228 116 218Z" fill="url(#restaurantGlow)"/>
+  </g>
+
+  <rect x="112" y="500" width="496" height="246" rx="24" fill="url(#table)" opacity="0.94"/>
+  <ellipse cx="360" cy="724" rx="228" ry="50" fill="#FFF7F2" opacity="0.96"/>
+  <path d="M260 700C260 676 281 656 307 656H413C439 656 460 676 460 700C460 724 439 744 413 744H307C281 744 260 724 260 700Z" fill="#FFFDFD"/>
+  <path d="M290 698C290 686 299 676 311 676H366C390 676 406 700 396 718C390 729 378 736 365 736H311C299 736 290 726 290 714V698Z" fill="#F6B6BE"/>
+  <path d="M372 685H430C444 685 454 696 454 710C454 724 444 735 430 735H390C382 735 375 731 370 725L355 707L372 685Z" fill="#F2B975"/>
+  <path d="M317 672C336 648 377 649 395 675L413 701L371 719L332 709L317 672Z" fill="#F0898E"/>
+
+  <path d="M198 458C219 395 275 352 340 352H380C448 352 506 398 524 464L543 534H179L198 458Z" fill="#F6F0F4"/>
+  <path d="M314 357H405V430C405 455 385 476 360 476C334 476 314 455 314 430V357Z" fill="#D79C76"/>
+  <path d="M266 274C266 221 309 178 362 178C415 178 458 221 458 274V319C458 375 414 420 360 420C306 420 266 375 266 319V274Z" fill="#E2A57E"/>
+  <path d="M284 264C284 204 328 160 389 160C433 160 469 188 482 229C469 223 454 221 438 222C403 223 373 207 351 183C334 211 312 234 284 264Z" fill="#121015"/>
+  <path d="M448 249C448 219 423 194 393 194H332C303 194 278 214 272 242L266 287C261 250 257 210 285 185C306 166 333 154 365 154H389C446 154 492 200 492 257V302C492 331 483 358 466 381L452 319L448 249Z" fill="#121015"/>
+  <ellipse cx="330" cy="301" rx="10" ry="13" fill="#201C22"/>
+  <ellipse cx="394" cy="301" rx="10" ry="13" fill="#201C22"/>
+  <path d="M330 356C347 368 373 368 390 356" stroke="#9C4D57" stroke-width="8" stroke-linecap="round"/>
+  <path d="M322 337C345 344 375 344 398 337" stroke="#E7B094" stroke-width="8" stroke-linecap="round"/>
+  <path d="M355 301C357 319 357 331 352 341" stroke="#C88668" stroke-width="6" stroke-linecap="round"/>
+  <path d="M246 488C264 437 303 402 348 402H372C419 402 458 438 474 488L489 534H231L246 488Z" fill="#FFFFFF"/>
+  <path d="M420 486C407 486 396 497 396 510V534H484L477 512C470 497 446 486 420 486Z" fill="#FFFFFF"/>
+  <path d="M401 487C401 470 415 456 432 456C449 456 463 470 463 487V534H401V487Z" fill="#F7F4F7"/>
+  <path d="M420 497C438 497 452 510 452 526V534H387V530C387 511 402 497 420 497Z" fill="#D81F4D"/>
+  <path d="M435 521C430 510 417 503 403 507C411 497 425 492 439 495C453 498 463 509 465 523C457 517 446 516 435 521Z" fill="#D81F4D"/>
+
+  <rect x="98" y="98" width="524" height="700" rx="30" stroke="rgba(255,255,255,0.45)" stroke-width="3"/>
+
+  <defs>
+    <linearGradient id="background" x1="360" y1="0" x2="360" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE6EC"/>
+      <stop offset="0.5" stop-color="#FFF7FA"/>
+      <stop offset="1" stop-color="#FFF1F5"/>
+    </linearGradient>
+    <linearGradient id="photoFrame" x1="360" y1="58" x2="360" y2="842" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFDCE7"/>
+      <stop offset="1" stop-color="#FFF7FA"/>
+    </linearGradient>
+    <linearGradient id="photoGlow" x1="360" y1="92" x2="360" y2="808" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C7CDD6"/>
+      <stop offset="0.34" stop-color="#D9C5BC"/>
+      <stop offset="0.68" stop-color="#A78374"/>
+      <stop offset="1" stop-color="#7C4D3A"/>
+    </linearGradient>
+    <linearGradient id="restaurantGlow" x1="360" y1="82" x2="360" y2="382" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E1E7F2" stop-opacity="0.82"/>
+      <stop offset="0.55" stop-color="#CDAE9D" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#8A5B4D" stop-opacity="0.12"/>
+    </linearGradient>
+    <linearGradient id="table" x1="360" y1="500" x2="360" y2="746" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4B49B"/>
+      <stop offset="1" stop-color="#C47957"/>
+    </linearGradient>
+  </defs>
+</svg>
